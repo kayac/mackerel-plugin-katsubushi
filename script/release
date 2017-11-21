@@ -1,5 +1,0 @@
-#!/bin/sh
-set -e
-latest_tag=$(git describe --abbrev=0 --tags)
-goxc
-ghr -u kayac -r mackerel-plugin-katsubushi $latest_tag dist/snapshot/

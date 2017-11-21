@@ -1,3 +1,5 @@
+LATEST_TAG := $(shell git describe --abbrev=0 --tags)
+
 setup:
 	go get \
 		github.com/laher/goxc \
@@ -17,5 +19,8 @@ dist:
 
 clean:
 	rm -fr dist/*
+
+release: dist
+	ghr -u kayac -r mackerel-plugin-katsubushi $(LATEST_TAG) dist/snapshot/
 
 .PHONY: packages test lint clean setup dist
