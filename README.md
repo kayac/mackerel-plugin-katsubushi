@@ -7,7 +7,7 @@ Mackerel plugin for [Katsubushi](https://github.com/kayac/go-katsubushi).
 Use [mkr](https://github.com/mackerelio/mkr).
 
 ```console
-# mkr plugin nstall kayac/mackerel-plugin-katsubushi@v0.0.0
+# mkr plugin install kayac/mackerel-plugin-katsubushi@v0.0.0
 ```
 
 ## Synopsis
