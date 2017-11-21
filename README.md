@@ -2,17 +2,35 @@
 
 Mackerel plugin for [Katsubushi](https://github.com/kayac/go-katsubushi).
 
+## Install
+
+Use [mkr](https://github.com/mackerelio/mkr).
+
+```console
+# mkr plugin nstall kayac/mackerel-plugin-katsubushi@v0.0.0
+```
+
 ## Synopsis
 
 ```shell
-mackerel-plugin-katsubushi [-metric-key-prefix=<prefix>]
+Usage of /opt/mackerel-agent/plugins/bin/mackerel-plugin-katsubushi:
+  -host string
+    	Hostname (default "localhost")
+  -metric-key-prefix string
+    	Metric key prefix (default "katsubushi")
+  -port string
+    	Port (default "11212")
+  -socket string
+    	Server socket (overrides hosts and port)
+  -tempfile string
+    	Temp file name
 ```
 
 ## Example of mackerel-agent.conf
 
 ```
-[plugin.metrics.sample]
-command = "/path/to/mackerel-plugin-katsubushi"
+[plugin.metrics.katsubushi]
+command = "/opt/mackerel-agent/plugins/bin/mackerel-plugin-katsubushi/mackerel-plugin-katsubushi"
 ```
 
 ## How to release
