@@ -15,3 +15,5 @@
 
 mackerel-plugin-katsubushi
 *~
+dist/*
+.envrc
